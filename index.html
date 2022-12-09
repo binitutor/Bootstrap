@@ -5,202 +5,147 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BiniTutor - Bootstrap</title>
+    <title>BiniTutor/Home</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
-    <link href="./bootstrap_5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
 </head>
 
 <body>
-    <!-- navigation menu  -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top mb-5 p-3">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow p-3 mb-5 fixed-top" aria-label="Ninth Navbar example">
         <div class="container-xl">
-            <a class="navbar-brand" href="./index.html">
+            <a href="./index.html" class="navbar-brand">
                 <span class="text-info">Bini</span><span class="text-danger">Tutor</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-expanded="false" aria-label="Toggle navigation">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#binNav" aria-controls="navbarsExample07XL" aria-expanded="false" aria-lable="Toggle Navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="mynavbar">
+            <div class="collapse navbar-collapse" id="binNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        <a href="./index.html" class="nav-link active" aria-current="page">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" aria-disabled="true">About</a>
+                        <a href="#" class="nav-link disabled">About</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="mydropdown" data-bs-toggle="dropdown" aria-expanded="false">Content</a>
-                        <ul class="dropdown-menu" aria-labelledby="mydropdown">
-                            <li><a class="dropdown-item" href="#">Images</a></li>
-                            <li><a class="dropdown-item" href="#">Videos</a></li>
-                            <li><a class="dropdown-item" href="#">Slides</a></li>
+                        <a href="#" class="nav-link" id="biniMiniDropdown" data-bs-toggle="dropdown" aria-expanded="false">Gallery</a>
+                        <ul class="dropdown-menu bg-dark" aria-labelledby="biniMiniDropdown">
+                            <li><a href="#" class="dropdown-item text-light">Images</a></li>
+                            <li><a href="#" class="dropdown-item text-light">Videos</a></li>
+                            <li><a href="#" class="dropdown-item text-light">Slides</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="./contact.html" tabindex="-1">Contact Us</a>
+                        <a href="./pages/contact.html" class="nav-link" tabindex="-1" aria-disabled="true">Contact Us</a>
                     </li>
                 </ul>
 
                 <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-danger" type="submit">
+                    <input type="search" class="form-control me-2" placeholder="Search here..." aria-label="Search">
+                    <button class="btn btn-success" type="submit">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-search text-light" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                         </svg>
                     </button>
                 </form>
             </div>
+
+
+
         </div>
     </nav>
 
-    <!-- main content  -->
-    <div class="container">
+    <!-- container  -->
+    <div class="container mt-5 pt-5">
 
-        <hr class="my-5">
+        <!-- jumbotron -->
+        <div class="bg-dark text-light p-5 mb-5 rounded">
+            <h1>BiniTutor - Homepage</h1>
+            <p class="h5">What is Lorem Ipsum?</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 
-        <!-- jumbotron  -->
-        <div class="jumbotron jumbotron-fluid mt-5 py-5 px-5 bg-dark text-light rounded">
-            <h1 class="display-4">BiniTutor - Homepage!</h1>
-
-            <p class="lead">
-                <code class="text-info">Welcome to my site.</code> For more information visit <a href="https://www.portfolio.binitutor.com" target="_blank">BiniTutor.com</a>
-            </p>
-            <p>
-                This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
-
-            </p>
-
-            <hr class="my-4">
-
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-
-            <!-- make this button a modal opener  -->
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal">
-                Read more &raquo;
-            </button>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#biniModal">Sign in &raquo;</button>
         </div>
 
-        <!-- modal  -- always hidden until called -->
-        <div class="modal fade" id="myModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header bg-danger">
-                        <h4 class="modal-title">Sign in</h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center py-2 mb-2">
-                            <img src="./img/profile.png" class="img-thumbnail rounded-circle" style="width: 10rem; height: 10rem;">
-                        </div>
-
-                        <form class="mt-5">
-                            <div class="row">
-                                <div class="col col-md-8">
-                                    <div class="form-group">
-                                        <label for="myEmail">Email</label>
-                                        <input type="email" class="form-control is-invalid" id="myEmail">
-                                    </div>
-                                    <small class="form-text text-muted">We will never share your email with anyone!</small>
-                                </div>
-
-                                <div class="col col-md-8">
-                                    <div class="form-group">
-                                        <label for="myPassword">Password</label>
-                                        <input type="password" class="form-control is-invalid" id="myPassword">
-                                    </div>
-                                    <small class="form-text text-muted">Please enter your password!</small>
-                                </div>
-
-                                <button type="button" class="btn btn-danger col col-md-4" data-bs-dismiss="modal">Sing in</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <small class="form-text text-muted">Please sing in to proceed!</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- content  -->
-        <div class="row content mt-5">
-            <h5>What is Lorem Ipsum?</h5>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-
-            <div class="col">
+        <!-- cards  -->
+        <div class="row mb-5">
+            <div class="col col-md-3">
                 <div class="card">
-                    <img src="./img/spring.png" class="card-img-top" alt="Spring season">
+                    <img src="./img/spring.png" alt="Spring weather" class="card-img-top">
+                    <div class="card-header">
+                        <p class="h5 card-title">Spring</p>
+                    </div>
 
                     <div class="card-body">
-                        <h5 class="card-title">Spring</h5>
                         <p class="card-text">
                             "You can cut all the flowers but you cannot keep Spring from coming."
                         </p>
-
-                        <a href="#" class="btn btn-danger">View Content</a>
                     </div>
+
+                    <a href="#" class="btn btn-success">Read more &raquo;</a>
                 </div>
             </div>
 
-            <div class="col">
-                <div class="card">
-                    <img src="./img/summer.png" class="card-img-top" alt="Summer season">
-
-                    <div class="card-body">
-                        <h5 class="card-title">Summer</h5>
-
-
-                        <blockquote class="blockquote">
-                            <p>"If you're not barefoot, then you're overdressed."</p>
-                            <footer class="blockquote-footer">Name <cite>Source Title</cite></footer>
-                        </blockquote>
-
-                        <a href="#" class="btn btn-danger">View Content</a>
-                    </div>
+            <div class="col col-md-3">
+                <img src="./img/summer.png" alt="Summer weather" class="card-img-top">
+                <div class="card-header">
+                    <p class="h5 card-title">Summer</p>
                 </div>
+
+                <div class="card-body">
+                    <blockquote class="blockquote">
+                        <p>"If you're not barefoot, then you're overdressed."</p>
+                        <footer class="blockquote-footer">
+                            Name <cite title="Source Title">Source Title</cite>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <a href="#" class="btn btn-success">Read more &raquo;</a>
             </div>
 
-            <div class="col">
-                <div class="card">
-                    <img src="./img/fall.png" class="card-img-top" alt="Fall season">
-
-                    <div class="card-body">
-                        <h5 class="card-title">Fall</h5>
-
-                        <div style="height: 5rem; overflow: scroll">
-                            <p class="card-text">
-                                "The first breath of autumn was in the air, a prodigal feeling, a feeling of wanting, taking, and keeping before it is too late. Autumn leaves shower like gold, like rainbows, as the winds of change begin to blow."
-                            </p>
-                        </div>
-                        <a href="#" class="btn btn-danger">View Content</a>
-                    </div>
+            <div class="col col-md-3">
+                <img src="./img/fall.png" alt="Fall weather" class="card-img-top">
+                <div class="card-header">
+                    <p class="h5 card-title">Fall</p>
                 </div>
-            </div>
 
-            <div class="col">
-                <div class="card">
-                    <img src="./img/winter.png" class="card-img-top" alt="Winter season">
-
-                    <div class="card-body">
-                        <h5 class="card-title">Winter</h5>
+                <div class="card-body">
+                    <div style="height: 6rem; overflow: scroll">
                         <p class="card-text">
-                            “To keep a warm heart in winter is the real victory.”
+                            The first breath of autumn was in the air, a prodigal feeling, a feeling of wanting, taking, and keeping before it is too late. Autumn leaves shower like gold, like rainbows, as the winds of change begin to blow.
                         </p>
-
-                        <a href="#" class="btn btn-danger">View Content</a>
                     </div>
+
                 </div>
+
+                <a href="#" class="btn btn-success">Read more &raquo;</a>
             </div>
 
+            <div class="col col-md-3">
+                <img src="./img/winter.png" alt="Winter weather" class="card-img-top">
+                <div class="card-header">
+                    <p class="h5 card-title">Winter</p>
+                </div>
+
+                <div class="card-body">
+                    <p class="card-text">
+                        “To keep a warm heart in winter is the real victory.”
+                    </p>
+                </div>
+
+                <a href="#" class="btn btn-success">Read more &raquo;</a>
+            </div>
         </div>
 
-        <div class="content mt-5">
-            <h5>Why do we use it?</h5>
+        <!-- more content  -->
+        <div class="row content mb-5">
+            <p class="h5">Why do we use it?</p>
+
             <p>
                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
                 content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
@@ -208,160 +153,88 @@
             </p>
 
             <div class="text-center bg-dark py-5 mb-5">
-                <img src="./img/green.png" class="img-thumbnail" alt="green place">
+                <img src="./img/green.png" alt="Rural aria" class="img-thumbnail">
+
             </div>
 
-            <div class="row">
-                <div class="col col-md-6">
-                    <h5>Why do we use it?</h5>
+            <p class="h5">Why do we use it?</p>
 
-                    <p>
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
-                        content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
-                        infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                    </p>
-                </div>
-                <div class="col col-md-6">
-                    <h5>Why do we use it?</h5>
-
-                    <p>
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
-                        content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
-                        infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                    </p>
-                </div>
-
-
-
-                <div class="col col-md-3">
-                    <h5>Why do we use it?</h5>
-
-                    <p>
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
-                        content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
-                        infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                    </p>
-                </div>
-                <div class="col col-md-3">
-                    <h5>Why do we use it?</h5>
-
-                    <p>
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
-                        content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
-                        infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                    </p>
-                </div>
-                <div class="col col-md-6">
-                    <h5>Why do we use it?</h5>
-
-                    <p>
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
-                        content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
-                        infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                    </p>
-                </div>
-            </div>
-
+            <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+                content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+                Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            </p>
 
         </div>
 
-        <!-- table  -->
-        <div class="content mt-5">
-            <table class="table table-striped">
-                <thead>
-                    <tr class="text-center bg-dark text-light">
-                        <th colspan="4">Custom table</th>
-                    </tr>
-                    <tr class="bg-dark text-light">
-                        <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email Address</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Bini</td>
-                        <td>Tutor</td>
-                        <td>bt@bt.com</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Abebe</td>
-                        <td>Tameru</td>
-                        <td>at@yahoo.com</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Mimi</td>
-                        <td>Tobia</td>
-                        <td>mt@yahoo.com</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Seble</td>
-                        <td>Arega</td>
-                        <td>sg@gmail.com</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="row">
+            <input type="checkbox" class="btn-check" id="btnChk">
+            <label for="btnChk" class="btn btn-outline-success">checkbox</label>
         </div>
 
-        <!-- buttons -->
-        <div class="content mt-5 mb-5">
-            <!-- checkbox  -->
-            <div class="form-check">
-                <input checked class="form-check-input" type="checkbox" id="checkChoice1">
-                <label class="form-check-label" for="checkChoice1">Checkbox choice 1</label>
-            </div>
+    </div>
 
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="checkChoice2">
-                <label class="form-check-label" for="checkChoice2">Checkbox choice 2</label>
-            </div>
+    <footer class="footer mt-5 py-5 bg-light">
+        <div class="container">
+            <span class="text-muted">
+                Copyright © 2022 All rights reserved | BiniTutor.com
+            </span>
+        </div>
+    </footer>
 
-            <!-- radio  -->
-            <div class="form-check">
-                <input name="radioChoices" class="form-check-input" type="radio" id="radioChoice1">
-                <label class="form-check-label" for="radioChoice1">Radio choice 1</label>
-            </div>
-            <div class="form-check">
-                <input name="radioChoices" class="form-check-input" type="radio" id="radioChoice2">
-                <label class="form-check-label" for="radioChoice2">Radio choice 2</label>
-            </div>
 
-            <!-- switch checkbox  -->
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="flexCheckChoice1">
-                <label class="form-check-label" for="flexCheckChoice1">Flex Checkbox choice 1</label>
-            </div>
+    <!-- sing in modal -->
+    <div class="modal fade" id="biniModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger">
+                    <p class="h4 modal-title text-light" id="exampleModalLabel">Sign in</p>
+                    <button class="btn-close bg-light" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
 
-            <!-- checkbox btn  -->
-            <div class="form-check">
-                <input class="btn-check" type="checkbox" id="btnCheckChoice">
-                <label class="btn btn-outline-danger" for="btnCheckChoice">
-                    Toggle Button
-                </label>
+                <div class="modal-body">
+                    <div class="text-center py-2 mb-2">
+                        <img src="./img/profile.png" alt="profile avatar" class="img-thumbnail rounded-circle" style="width: 10rem; height: 10rem">
+                    </div>
+
+                    <form class="mb-5">
+                        <div class="form-row">
+                            <div class="row">
+                                <div class="col col-md-8 px-2 pb-2">
+                                    <div class="form-group">
+                                        <label for="myEmail">Email:</label>
+                                        <input type="text" class="form-control" id="myEmail" placeholder="Enter email">
+                                        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                    </div>
+                                </div>
+                                <div class="col col-md-8 px-2 pb-2">
+                                    <div class="form-group">
+                                        <label for="myPassword">Password:</label>
+                                        <input type="password" class="form-control" id="myPassword" placeholder="Enter password">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-danger">Sign in</button>
+                        </div>
+                    </form>
+
+
+                </div>
+
+                <div class="modal-footer">
+                    <small class="text-muted">Please sign in to proceed!</small>
+                </div>
             </div>
         </div>
-
     </div>
 
 
 
 
-
-    <!-- footer  -->
-    <footer class="footer mt-5 py-3 bg-dark">
-        <div class="container">
-            <span class="text-muted">
-                Copyright &copy; 2022 All rights reserved | Binitutor.com
-            </span>
-        </div>
-    </footer>
-
-    <script src="./bootstrap_5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

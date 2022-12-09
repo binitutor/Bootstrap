@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiniTutor/Contact</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow p-3 mb-5 fixed-top" aria-label="Ninth Navbar example">
+        <div class="container-xl">
+            <a href="../index.html" class="navbar-brand">
+                <span class="text-info">Bini</span><span class="text-danger">Tutor</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#binNav" aria-controls="navbarsExample07XL" aria-expanded="false" aria-lable="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="binNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link active" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link disabled">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link" id="biniMiniDropdown" data-bs-toggle="dropdown" aria-expanded="false">Gallery</a>
+                        <ul class="dropdown-menu bg-dark" aria-labelledby="biniMiniDropdown">
+                            <li><a href="#" class="dropdown-item text-light">Images</a></li>
+                            <li><a href="#" class="dropdown-item text-light">Videos</a></li>
+                            <li><a href="#" class="dropdown-item text-light">Slides</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./pages/contact.html" class="nav-link" tabindex="-1" aria-disabled="true">Contact Us</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input type="search" class="form-control me-2" placeholder="Search here..." aria-label="Search">
+                    <button class="btn btn-success" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-search text-light" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+
+
+        </div>
+    </nav>
+
+    <!-- container  -->
+    <div class="container mt-5 pt-5">
+
+        <!-- jumbotron -->
+        <div class="bg-light  p-5 mb-5 rounded">
+            <h1> Contact Us</h1>
+        </div>
+
+        <!-- contact form  -->
+        <form class="border border-secondary p-5 rounded">
+            <div class="row">
+                <div class="col col-md-4 mb-3">
+                    <label for="fName">First name</label>
+                    <input type="text" class="form-control is-valid" id="fName">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Invalid!
+                    </div>
+                </div>
+
+                <div class="col col-md-4 mb-3">
+                    <label for="lName">Last name</label>
+                    <input type="text" class="form-control is-valid" id="lName">
+
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Invalid!
+                    </div>
+                </div>
+
+                <div class="col col-md-4 mb-3">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control is-invalid" id="email">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Invalid!
+                    </div>
+                </div>
+
+                <div class="col col-md-12 mb-3">
+                    <label for="address">Home Address</label>
+                    <input type="text" class="form-control" id="address">
+                </div>
+
+                <div class="col col-md-6 mb-3">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city">
+                </div>
+
+                <div class="col col-md-3 mb-3">
+                    <label for="state">State</label>
+                    <select name="" id="state" class="form-control">
+                        <option value="">Amhara</option>
+                        <option value="">Oromia</option>
+                        <option value="">Afar</option>
+                        <option value="">Tigray</option>
+                        <option value="">Benshangul</option>
+                    </select>
+                </div>
+
+                <div class="col col-md-3 mb-3">
+                    <label for="zip">Zip code</label>
+                    <input type="number" class="form-control" id="zip">
+                </div>
+
+
+                <button class="btn btn-success col col-md-2">Submit</button>
+
+            </div>
+        </form>
+
+
+    </div>
+
+    <footer class="footer mt-5 py-5 bg-light">
+        <div class="container">
+            <span class="text-muted">
+                Copyright © 2022 All rights reserved | BiniTutor.com
+            </span>
+        </div>
+    </footer>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
